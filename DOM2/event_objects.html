@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+      }
+
+      #container > div {
+        width: 200px;
+        height: 200px;
+        background-color: teal;
+        font-size: 50px;
+        margin: 20px;
+        /* margin: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>
+<script>
+  // Question is Wheneven I clicked on box one I should know that I clicked on box one
+  //   function clickedBoxOne(event) {
+  //     console.log(event.target);
+  //     event.target.style.backgroundColor = "tomato";
+  //   }
+
+  //   function clickedBoxTwo(event) {
+  //     console.log(event.target);
+  //     event.target.style.backgroundColor = "pink";
+  //   }
+  //   document
+  //     .querySelector("#container>div:nth-child(1)")
+  //     .addEventListener("click", clickedBoxOne);
+
+  //   document
+  //     .querySelector("#container>div:nth-child(2)")
+  //     .addEventListener("click", clickedBoxTwo);
+
+  var boxes = document.querySelectorAll("#container>div");
+  console.log(boxes);
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListner("click", myFunction);
+  }
+
+  function myFunction() {
+    console.log(event);
+    event.target.style.backgroundColor = "tomato";
+  }
+</script>
+<!-- at time:1:13 in dom2 -->

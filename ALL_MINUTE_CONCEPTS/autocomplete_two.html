@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main-container {
+        height: 250px;
+        width: 400px;
+        /* border: 1px solid; */
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 10%;
+        text-align: center;
+        background-color: #f5f5f5;
+        /* padding-top: 2%; */
+        padding-top: 25px;
+      }
+      input[type="number"] {
+        margin-top: 4%;
+        width: 320px;
+        /* box-sizing: border-box; */
+        height: 20px;
+        padding: 5px;
+        padding-left: 10px;
+      }
+      #browser {
+        /* border: 1px solid; */
+        margin-top: 4%;
+        width: 320px;
+
+        height: 20px;
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      button {
+        background-color: #003380;
+
+        margin-top: 4%;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 6px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 340px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      h3 {
+        /* border: 1px solid; */
+        width: 350px;
+        margin: auto;
+        margin-top: 20px;
+        font-family: sans-serif;
+        font-size: 17px;
+      }
+      /* input:focus {
+        outline: 2px solid lightblue;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+          rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      } */
+
+      input {
+        border: 2px solid #dadada;
+        border-radius: 7px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed;
+      }
+      hr {
+        width: 340px;
+        margin: auto;
+        margin-top: 10px;
+        border-top: 1px solid #003380c9;
+        /* border: 0.5px solid #003380c9; */
+      }
+
+      input::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input list="datalist_id"> 
+        datalist_id	Specifies the id of the datalist to bind the <input> element to 
+    -->
+    <div id="main-container">
+      <form>
+        <h3 style="color: rgb(61, 56, 56)">
+          Mobile Number Linked Loyalty Account
+        </h3>
+        <hr />
+        <input type="number" placeholder="PHONE NUMBER" id="phone" required />
+        <br />
+        <input
+          list="browsers"
+          name="browser"
+          id="browser"
+          placeholder="CITY"
+          required
+        />
+        <datalist id="browsers">
+          <option value="ABADPUR"></option>
+          <option value="ABDU RAHIMAN N"></option>
+          <option value="ABHANPUR"></option>
+          <option value="ABHAYAPURI"></option>
+          <option value="BERHAIT BAZAR"></option>
+          <option value="BALLARPUR"></option>
+          <option value="CHALLAKERE"></option>
+          <option value="CHALLAPALLE"></option>
+          <option value="DALSINGHSARAI"></option>
+          <option value="FARIDABAD"></option>
+          <option value="BALLABGARH"></option>
+          <option value="GURUGRAM"></option>
+          <option value="PANIPAT"></option>
+          <option value="ABMALA"></option>
+          <option value="ROHTAK"></option>
+        </datalist>
+        <br />
+        <button onclick="submitData()">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  function submitData() {
+    var number = document.querySelector("#phone").value;
+    console.log(number);
+    var city = document.querySelector("#browser").value;
+    console.log(city);
+
+    document.querySelector("#phone").value = "";
+    document.querySelector("#browser").value = "";
+  }
+</script>

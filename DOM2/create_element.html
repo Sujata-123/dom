@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #h1Tag {
+        color: red;
+        background-color: teal;
+      }
+      img {
+        width: 25%;
+        height: 300px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all these thing can be done by using javascript -->
+    <!-- <h1>I am h1</h1>
+    <h2>I am h2</h2>
+    <h3>I am h3</h3>
+    <h4>I am h4</h4> -->
+  </body>
+</html>
+<script>
+  // document.createElement("")
+  var heading1 = document.createElement("h1");
+  heading1.textContent = "I am heading 1";
+  var bodyTag = document.querySelector("body");
+  bodyTag.appendChild(heading1);
+  heading1.setAttribute("id", "h1Tag");
+
+  var heading2 = document.createElement("h2");
+  heading2.textContent = "I am heading 2";
+  bodyTag.appendChild(heading2);
+
+  var heading3 = document.createElement("h3");
+  heading3.textContent = "I am heading 3";
+  bodyTag.appendChild(heading3);
+
+  var heading4 = document.createElement("h4");
+  heading4.textContent = "I am heading 4";
+  bodyTag.appendChild(heading4);
+
+  var heading5 = document.createElement("h5");
+  heading5.textContent = "I am heading 5";
+  bodyTag.appendChild(heading5);
+
+  var heading6 = document.createElement("h6");
+  heading6.textContent = "I am heading 6";
+  bodyTag.appendChild(heading6);
+
+  var img = document.createElement("img");
+  img.setAttribute(
+    "src",
+    "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+  );
+  bodyTag.appendChild(img);
+</script>

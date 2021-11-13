@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- what is textContent whatever we write inside and tags like whatever we wrote inside 
+    div that is textContent -->
+    <div id="container">I am div 1</div>
+    <div id="masai"><p>I am div 2</p></div>
+  </body>
+</html>
+<script>
+  // writing like this we will get textContent
+  console.log(document.getElementById("container").textContent);
+  console.log(document.getElementById("masai"));
+  console.log(document.getElementById("masai").innerHTML);
+  //   if writing .innerHTML it will show tags also see on console.
+  //   textContent will only give texts and innerHTML will give tags also.
+  // we can change the text content also see below.
+
+  document.getElementById("container").textContent = "I am div 1 new";
+  document.getElementById("masai").textContent = "I am div 2 new";
+  document.getElementById("container").textContent = "<h1>Hello guys</h1>";
+  document.getElementById("container").innerHTML = "<h1>Hello guys</h1>";
+</script>

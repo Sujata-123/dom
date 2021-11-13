@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        background-color: tomato;
+        width: 400px;
+        margin-bottom: 20px;
+      }
+      #container > div {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <button>Remove</button>
+  </body>
+</html>
+<script>
+  document.querySelector("button").addEventListener("click", removeAll);
+  //   function removeDiv() {
+  //   remove first child
+  //     var firstDiv = document.querySelector("#container>div:nth-child(1)");
+  //     firstDiv.remove();
+  //   }
+  //   document.querySelector("button").addEventListener("click", removeDiv);
+
+  //   remove all childs
+  function removeAll() {
+    var allChilds = document.querySelectorAll("#container>div");
+    for (var i = 0; i < allChilds.length; i++) {
+      allChilds[i].remove();
+    }
+  }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>0</h1>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+  </body>
+</html>
+<script>
+  var count = 0;
+  function incrementFun() {
+    count = count + 1;
+    document.querySelector("h1").textContent = count;
+  }
+  function decrementFun() {
+    count = count - 1;
+    document.querySelector("h1").textContent = count;
+    if (count <= 0) {
+      document.getElementById("dec").removeEventListener("click", decrementFun);
+    }
+  }
+  // addEventistner(event,function)
+  document.getElementById("inc").addEventListener("click", incrementFun);
+  document.getElementById("dec").addEventListener("click", decrementFun);
+</script>

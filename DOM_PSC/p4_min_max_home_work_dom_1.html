@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <div>42</div>
+        <h1>Min</h1>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var current_score = "";
+  var min = 42;
+  var max = 2019;
+  function press(num) {
+    current_score = current_score + num;
+    document.getElementById("score").textContent = current_score;
+  }
+  document.getElementById("enter").addEventListener("click", compareScore);
+  function compareScore() {
+    if (current_score > max) {
+      max = current_score;
+      document.getElementById("max-score").textContent = current_score;
+    } else if (current_score < min) {
+      min = current_score;
+    }
+  }
+</script>

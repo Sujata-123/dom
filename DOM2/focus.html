@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input:focus {
+        background-color: rgba(0, 128, 128, 0.301);
+      } */
+    </style>
+  </head>
+  <body>
+    <!--when we enter into input box that is called focus  -->
+    <!-- when you click outside of input box that is blur -->
+    <input type="text" />
+  </body>
+</html>
+<script>
+  const focusFunction = () => {
+    document.querySelector("input").style.backgroundColor = "teal";
+    document.querySelector("input").style.width = "200px";
+  };
+  document.querySelector("input").addEventListener("focus", focusFunction);
+
+  const blurFunction = () => {};
+  document.querySelector("input").addEventListener("blur", blurFunction);
+</script>

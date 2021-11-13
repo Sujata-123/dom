@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input::-webkit-inner-spin-button,
+      input::-webkit-clear-button {
+        display: none;
+      }
+
+      input::-webkit-calendar-picker-indicator {
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+      }
+
+      input::-webkit-calendar-picker-indicator:hover {
+        background: transparent;
+        cursor: pointer;
+      }
+
+      input::-webkit-calendar-picker-indicator::after {
+        content: "";
+        display: block;
+        /* background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-512.png)
+          no-repeat; */
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        /* top: 50%; */
+        right: 0;
+        margin-top: -16px;
+      }
+
+      .date {
+        position: relative;
+        width: 154px;
+        overflow: auto;
+        margin: 30px auto;
+        background: #000;
+      }
+      input {
+        width: 140px;
+        padding: 5px;
+        height: 24px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="date">
+      <input type="date" />
+    </div>
+  </body>
+</html>

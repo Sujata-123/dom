@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        background-color: tomato;
+        width: 400px;
+        height: 400px;
+      }
+      #container > div {
+        width: 100px;
+        margin: 20px;
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </body>
+</html>
+<script>
+  var body = document.querySelector("body");
+  var mainDiv = document.createElement("div");
+</script> -->
+<!-- doing above code just by using javascript -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        width: 400px;
+        height: 400px;
+        background-color: tomato;
+      }
+      #container > div {
+        width: 100px;
+        height: 200px;
+        background-color: teal;
+        margin: 10px;
+      }
+      img {
+        margin-top: 10px;
+        width: 25%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container">
+      <div>1</div>
+      <div>2</div>
+    </div> -->
+  </body>
+</html>
+<script>
+  var body = document.querySelector("body");
+  var mainDiv = document.createElement("div");
+  mainDiv.setAttribute("id", "container");
+  var div1 = document.createElement("div");
+  div1.textContent = "1";
+  var div2 = document.createElement("div");
+  div2.textContent = "2";
+  var img = document.createElement("img");
+  img.setAttribute(
+    "src",
+    "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+  );
+  mainDiv.append(div1, div2, img);
+  body.append(mainDiv);
+</script>

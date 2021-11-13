@@ -1,0 +1,54 @@
+<!-- setAttribute
+getAttribute
+removeAttribute -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #pTag {
+        background-color: teal;
+      }
+      #anchor {
+        text-decoration: none;
+      }
+      img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        /* object-position: 50% 50% 100% 30%; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="https://www.w3schools.com/" target="_blank">W3school</a> -->
+    <a>W3School</a>
+    <p>I am ptag</p>
+    <img />
+  </body>
+</html>
+
+<script>
+  // setAttribute(attributeName,attributeValue)
+  //   setAttribute("href", "https://www.w3schools.com/");
+  // setAttribute("target","_blank")
+  //   var x = document.getElementsByTagName("a");
+  //   x[0].setAttribute("href", "https://www.w3schools.com/");
+
+  var x = document.querySelector("a");
+  x.setAttribute("href", "https://www.w3schools.com/");
+  x.setAttribute("target", "_blank");
+  x.setAttribute("id", "anchor");
+  console.log(x);
+  document.querySelector("p").setAttribute("id", "pTag");
+
+  document
+    .querySelector("img")
+    .setAttribute(
+      "src",
+      "https://vinusimages.co/wp-content/uploads/2018/10/EG7A2390.jpgA_.jpg"
+    );
+</script>
